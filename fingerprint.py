@@ -385,7 +385,7 @@ args = parser.parse_args()
 
 datasets = list(os.listdir(args.datasets_root))[::-1]  # SHA1-PRF first
 #datasets = list(os.listdir(args.datasets_root))  # AES first
-for ds in ["noise.npy", "nodemcu-fullconnect", "nodemcu-mix", "OLDnodemcu-random-train", "OLDnodemcu-random-test", "nodemcu-random-train", "nodemcu-random-test", "nodemcu-random-label-train", "nodemcu-random-label-test", "nodemcu-random-train2", "nodemcu-random-test2"]:
+for ds in ["noise.npy", "nodemcu-fullconnect", "nodemcu-mix", "OLDnodemcu-random-train", "OLDnodemcu-random-test", "nodemcu-random-train", "nodemcu-random-test", "nodemcu-random-label-train", "nodemcu-random-label-test", "nodemcu-random-train2", "nodemcu-random-test2", "nodemcu-random-label-val"]:
     try:
         datasets.remove(ds)
     except ValueError:
