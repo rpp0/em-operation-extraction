@@ -155,7 +155,7 @@ def get_batch(dataset_path, dataset_file, batch_c, batch_size=1, wavenet=False, 
         #plot_meta(meta_trace_set[j])
         #plt.show()
         if augment:
-            if np.random.randint(0, randint_max) == 1:
+            if np.random.randint(randint_min, randint_max) == 1:
                 filtered_trace = augment_trace(filtered_trace, meta=meta_trace_set[j])
             else:
                 filtered_trace = augment_trace_old(filtered_trace, meta=meta_trace_set[j])
