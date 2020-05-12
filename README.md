@@ -1,6 +1,6 @@
 # Practical Operation Extraction from Electromagnetic Leakage for Side-Channel Analysis and Reverse Engineering
 
-This repository contains the code for our work presented at WiSec 2020, entitled "Practical Operation Extraction from Electromagnetic Leakage for Side-Channel Analysis and Reverse Engineering". In order to replicate our obtained results, please download the accompanying VM via http://wisecdata.ccs.neu.edu/. In addition to this code, the VM contains all pre-trained models and datasets as well.
+This repository contains the code for our work presented at WiSec 2020, entitled "Practical Operation Extraction from Electromagnetic Leakage for Side-Channel Analysis and Reverse Engineering". In order to replicate our obtained results, please download the accompanying VM via http://wisecdata.ccs.neu.edu/. In addition to this code, the VM contains all pre-trained models and datasets as well. If you are reading this message on the VM, please perform a `git pull origin master` to download the latest version of this `README.md`.
 
 ## 1. Replicating our results using pre-trained models
 
@@ -62,13 +62,9 @@ If you wish to perform realtime classification of EM traces using an SDR and our
 
 1. If not done already, install [EMMA](https://github.com/), which is a framework for capturing EM traces using SDR. EMMA is already installed on the virtual machine.
 2. Copy `best_cnn_bb_2d.h5` or `best_cnn_bb.h5` to `/tmp/`.
-3. Connect a NodeMCU, and make sure it can be accessed on the VM at `/dev/ttyUSB0`. The custom firmware should be uploaded to the NodeMCU, so that it can communicate with EMMA.
+3. Connect a NodeMCU, and make sure it can be accessed on the VM at `/dev/ttyUSB0`. The custom firmware located at [https://github.com/rpp0/em-nodemcu-firmware](https://github.com/rpp0/em-nodemcu-firmware) should be uploaded to the NodeMCU, so that it can communicate with EMMA.
 4. Run `./realtime_capture.py`.
 
 ## 5. Extra results
 
 Due to space constraints, we limited the inclusion of confusion matrices in the paper to the most interesting ones. Some extra results can be found in the `paper_results` folder.
-
-## 6. Performing new measurements
-
-## 7. Retraining models
