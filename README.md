@@ -58,6 +58,13 @@ In the appendix, the number of examples per class are given. These counts can be
 
 ## 4. Realtime experiment
 
+If you wish to perform realtime classification of EM traces using an SDR and our models, the following steps can be followed:
+
+1. If not done already, install [EMMA](https://github.com/), which is a framework for capturing EM traces using SDR. EMMA is already installed on the virtual machine.
+2. Copy `best_cnn_bb_2d.h5` or `best_cnn_bb.h5` to `/tmp/`.
+3. Connect a NodeMCU, and make sure it can be accessed on the VM at `/dev/ttyUSB0`. The custom firmware should be uploaded to the NodeMCU, so that it can communicate with EMMA.
+4. Run `./realtime_capture.py`.
+
 ## 5. Extra results
 
 Due to space constraints, we limited the inclusion of confusion matrices in the paper to the most interesting ones. Some extra results can be found in the `paper_results` folder.
