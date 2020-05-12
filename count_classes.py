@@ -14,9 +14,6 @@ dataset_path = os.path.join(args.datasets_root, args.dataset_name)
 dataset_files = list(os.listdir(dataset_path))
 count_dict = defaultdict(lambda: 0)
 
-noise_trace = np.load("./datasets/noise.npy")
-print("Noise trace: %d samples" % len(noise_trace))
-
 for dataset_file in dataset_files:
     if '_traces.npy' in dataset_file:
         # Get metadata and trace paths
