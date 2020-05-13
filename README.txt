@@ -1,5 +1,7 @@
 Readme for reproducibility submission of paper ID 147
 
+VM username: wisec2020
+VM password: wisec2020
 
 A) Source code info
 Repository: https://github.com/rpp0/em-operation-extraction
